@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.mainDiv {
+  background-color: #3d1f98;
   min-height: 100vh;
+  min-width: 100vw;
+}
+
+.header {
+  padding: 1rem;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btnContainer {
+  background-color: #337ab7;
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+.btnContainer h3 {
+  color: #fff;
+}
+.searchInput {
+  width: 100%;
+  height: 60px;
+}
+
+.searchInput input {
+  width: 100%;
+  height: 100%;
+  background-color: #337ab7;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 0 1rem;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.searchInput input::placeholder {
+  color: #fff;
+  font-style: italic;
+}
+
+.recentItems h2 {
+  color: #f3ad0b;
+}
+
+.searchHistory {
+  margin: 1.5rem 0;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  border-radius: 100px;
+  padding: 2px 1rem;
+  background-color: #337ab7;
+  height: 50px;
+  width: 200px;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.recentAndKeyBoardContainer {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.keyBoardConaiter {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.keyBoardKeyContainer button {
+  width: 60px;
+  height: 60px;
+  background-color: #241063;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
+.keyBoardKeyContainer button:hover {
+  background-color: #f3ad0b;
+  color: #fff;
+}
+
+.searchResultConatiner h2 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.searchResult {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  place-items: center;
+}
+
+.cardImgContainer {
+  width: 250px;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cardImgContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.card h3 {
+  color: #fff;
 }
